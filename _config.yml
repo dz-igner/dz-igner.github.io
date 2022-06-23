@@ -83,7 +83,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://nextcloud.cloudsic.de/s/xp3x6FQbssyEXCD
+avatar: https://nextcloud.cloudsic.de/s/xp3x6FQbssyEXCD/download/dv.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true

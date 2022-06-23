@@ -21,12 +21,12 @@ timezone: Europe/Berlin
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Another Homelab Story           # the main title
+title: Darth Vaper             # the main title
 
-tagline: Darth Vapers Homelab          # it will display as the sub-title
+tagline: Homelab Documentation # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  Another Homelab Blog for documentation
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://dz-igner.github.io'

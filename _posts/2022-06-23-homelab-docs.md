@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meet Jekyll, Homelab Documentation Goes Online"
-date: 2022-06-23
+date: 2022-06-24 04:30
 categories: self-hosted
 tags: jekyll website github gitlab docker
 ---

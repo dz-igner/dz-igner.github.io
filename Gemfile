@@ -42,7 +42,7 @@ gem "jekyll-coffeescript"
 # Site dependencies
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
-gem "jekyll-mermaid"
+# gem "jekyll-mermaid"
 
 # A dependency of a custom-plugin inside `_plugins` directory.
 gem "nokogiri", "~> 1.11"

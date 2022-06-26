@@ -6,9 +6,9 @@ categories: communication
 tags: communication
 ---
 
-# Introduction
+## Introduction
 
-## What is Matrix?
+### What is Matrix?
 
 Matrix is an open standard for interoperable, decentralised, real-time communication over IP.
 
@@ -17,7 +17,7 @@ Matrix is an open standard for interoperable, decentralised, real-time communica
 - Matrix is decentralised, which means there is no central point - anyone can host their own server and have control over their data
 - it is designed to function in real-time, which means it is ideal for building systems that require immediate exchange of data, such as Instant Messaging
 
-## How does it work?
+### How does it work?
 
 Each user connects to a single server, this is their homeserver. Users are able to participate in rooms that were created on any Matrix server since each server federates with other Matrix servers. This means you can talk to anyone on any server. It also means you can host your own server, giving you control over all of your data. Self hosting also gives you the ability to customize your server to fit your needs including giving you the ability to bridge to other chat networks (such as IRC, XMPP, Discord, Telegram, etc) or to host bots.
 

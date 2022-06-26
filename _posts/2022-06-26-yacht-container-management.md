@@ -8,15 +8,15 @@ tags: docker
 summary: 
 ---
 
-# Introduction
+## Introduction
 
 ![Darth Vaper](https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png){: width="200" height="200" }{: .left }{: .shadow }
 
-## What is Yacht?
+### What is Yacht?
 
 A web interface for managing docker containers with an emphasis on templating to provide one-click deployments of dockerized applications. Think of it like a decentralized app store for servers that anyone can make packages for.
 
-## Features
+### Features
 
 * Container templating compatibility (Portainer compatible)
 * Basic container management
@@ -27,12 +27,12 @@ A web interface for managing docker containers with an emphasis on templating to
 * Docker-compose compatibility and editor
 * One click editing of containers
 
-## Features (Coming Soon!)
+### Features (Coming Soon!)
 
 * User Managment
 * Container CLI attachment _If you want something that's not planned please open a feature request issue and we'll see about getting it added_.
 
-## Templates
+### Templates
 
 Currently Yacht is compatible with portainer templates. You'll add a template url in the "Add Template" settings. The the template will be read, separated into apps, and imported into the database. The apps associated with the templates are linked via a db relationship so when the template is removed, so are the apps associated with it. We store the template url as well so we can enable updating templates with a button press.
 

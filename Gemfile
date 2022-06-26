@@ -20,3 +20,13 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
 gem "webrick", "~> 1.7"
+
+gem "jekyll"
+gem 'jekyll-admin'
+gem "jekyll-gist"
+gem "jekyll-coffeescript"
+gem "jekyll-seo-tag", "~> 1.5"
+gem "some-other-jekyll-plugin"
+
+# A dependency of a custom-plugin inside `_plugins` directory.
+gem "nokogiri", "~> 1.11"

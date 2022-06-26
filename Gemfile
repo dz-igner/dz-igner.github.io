@@ -22,7 +22,8 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 gem "webrick", "~> 1.7"
 
 gem "jekyll"
-gem 'jekyll-admin'
+# gem 'jekyll-admin'
+gem 'jekyll-admin', group: :jekyll_plugins
 gem "jekyll-gist"
 gem "jekyll-coffeescript"
 # gem "jekyll-seo-tag", "~> 1.5"

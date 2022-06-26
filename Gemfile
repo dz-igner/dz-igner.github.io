@@ -26,7 +26,7 @@ gem 'jekyll-admin'
 gem "jekyll-gist"
 gem "jekyll-coffeescript"
 # gem "jekyll-seo-tag", "~> 1.5"
-gem "some-other-jekyll-plugin"
+# gem "some-other-jekyll-plugin"
 
 # A dependency of a custom-plugin inside `_plugins` directory.
-# gem "nokogiri", "~> 1.11"
+gem "nokogiri", "~> 1.11"

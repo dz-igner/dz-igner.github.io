@@ -8,10 +8,9 @@ tags: docker
 summary: 
 ---
 
-![Darth Vaper](https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png){: width="200" height="200" }{: .left }{: .shadow }
-
-
 # Introduction
+
+![Darth Vaper](https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png){: width="200" height="200" }{: .left }{: .shadow }
 
 ## What is Yacht?
 

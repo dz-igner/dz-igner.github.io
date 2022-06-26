@@ -60,6 +60,7 @@ GEM
       coffee-script-source (~> 1.12)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
+    jekyll-mermaid (1.0.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -151,6 +152,7 @@ DEPENDENCIES
   jekyll-admin
   jekyll-coffeescript
   jekyll-gist
+  jekyll-mermaid
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap

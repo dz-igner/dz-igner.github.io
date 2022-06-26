@@ -151,6 +151,9 @@ DEPENDENCIES
   jekyll-admin
   jekyll-coffeescript
   jekyll-gist
+  jekyll-redirect-from
+  jekyll-seo-tag
+  jekyll-sitemap
   jekyll-theme-chirpy (~> 5.2, >= 5.2.1)
   nokogiri (~> 1.11)
   tzinfo (~> 1.2)

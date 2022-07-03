@@ -11,3 +11,8 @@ summary:
 ## Introduction
 
 ## Installation
+
+```yaml
+volumes
+    - ./path-on-host/config:/config
+```

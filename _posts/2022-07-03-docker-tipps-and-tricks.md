@@ -74,10 +74,6 @@ Ob Docker-Compose läuft, verrät `docker compose version`.
 docker compose version
 ```
 
-{% highlight docker %}
-docker compose version
-{% endhighlight %}
-
 ## Docker unterwegs
 
 Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer unterwegs mit Docker experimentieren oder testen möchte, kann sich den Webdienst `Play With Docker` ansehen. Dort kann man sich mit den Docker-Anmeldedaten einloggen und im Browser mit Containern hantieren.

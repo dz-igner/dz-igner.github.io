@@ -8,8 +8,6 @@ tags: [docker]
 summary: 
 ---
 
-## Mit Docker ist es einfach, Server-Software auszuprobieren und zu betreiben. So installieren Sie die Container-Plattform für gängige Betriebssysteme auf dem Server oder Entwickler-PC.
-
 Um in die Welt von Docker einzusteigen, muss man die Container-Software erst einmal installieren. Die offizielle Docker-Dokumentation ist leider nicht unbedingt für Docker-Neulinge optimiert. Wir haben zusammengefasst, welche Versionen der Software es gibt, wo sie zu finden ist und wie Sie die aktuelle Ausgabe auf Ihrem System zum Laufen bringen.
 
 ## Community oder Desktop

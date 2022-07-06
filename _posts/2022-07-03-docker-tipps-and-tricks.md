@@ -61,3 +61,12 @@ apt install docker-compose-plugin
 ```
 
 Auch das Updaten ist einfach – mit apt upgrade werden Docker und Docker-Compose auf den aktuellen Stand gebracht.
+
+## Docker testen
+
+Nach der Installation von Docker und Docker-Compose können Sie Programme schnell auf allen Betriebssystemen testen. Ob der Docker-Daemon läuft, verrät `docker version`.
+
+Ob Docker-Compose läuft, verrät `docker compose version`.
+## Docker unterwegs
+
+Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer unterwegs mit Docker experimentieren oder testen möchte, kann sich den Webdienst `Play With Docker` ansehen. Dort kann man sich mit den Docker-Anmeldedaten einloggen und im Browser mit Containern hantieren.

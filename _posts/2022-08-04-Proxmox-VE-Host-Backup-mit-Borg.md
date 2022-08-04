@@ -8,6 +8,8 @@ tags: [proxmox]
 summary: 
 ---
 
+![Darth Vaper](https://borgbackup.readthedocs.io/en/stable/_static/logo.svg){: width="200" height="200" }{: .left }{: .shadow }
+
 Das Proxmox Host Backup ist genauso wichtig, wie die Backups wie von den eigentlichen virtuellen Maschinen. Wenn es zu dem Fall kommt, dass der Host selber ausfällt, dann sind nicht nur die Hüllen von den virtuellen Maschinen weg, sondern auch jegliche Einstellungen in eurer Proxmox Umgebung.
 
 Eventuell habt Ihr spezielle Einstellungen vorgenommen, spezielle Backup oder HA Regeln. Alle diese Regeln sind nun weg. Also müssen wir uns bemühen, dass auch diese Einstellungen schnell und einfach gesichert werden.

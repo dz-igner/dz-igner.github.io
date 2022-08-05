@@ -26,7 +26,7 @@ This installation method is for test-setups and small-scale productive setups.
 
 ### Preparation
 
-Download the latest docker-compose.yml from here. Place it in a directory of your choice.
+Download the latest `docker-compose.yml` from [here](https://goauthentik.io/docker-compose.yml). Place it in a directory of your choice.
 
 If this is a fresh authentik install run the following commands to generate a password:
 
@@ -40,3 +40,52 @@ echo "AUTHENTIK_SECRET_KEY=$(pwgen -s 50 1)" >> .env
 # Skip if you don't want to enable error reporting
 echo "AUTHENTIK_ERROR_REPORTING__ENABLED=true" >> .env
 ```
+
+### Email configuration (optional, but recommended)
+
+It is also recommended to configure global email credentials. These are used by authentik to notify you about alerts and configuration issues. They can also be used by [Email stages](https://goauthentik.io/docs/flow/stages/email/) to send verification/recovery emails.
+
+Append this block to your `.env` file
+
+```bash
+# SMTP Host Emails are sent to
+AUTHENTIK_EMAIL__HOST=localhost
+AUTHENTIK_EMAIL__PORT=25
+# Optionally authenticate (don't add quotation marks to you password)
+AUTHENTIK_EMAIL__USERNAME=
+AUTHENTIK_EMAIL__PASSWORD=
+# Use StartTLS
+AUTHENTIK_EMAIL__USE_TLS=false
+# Use SSL
+AUTHENTIK_EMAIL__USE_SSL=false
+AUTHENTIK_EMAIL__TIMEOUT=10
+# Email address authentik will send from, should have a correct @domain
+AUTHENTIK_EMAIL__FROM=authentik@localhost
+```
+
+### GeoIP configuration (optional)
+
+authentik can use a MaxMind-formatted GeoIP Database to extract location data from IPs. You can then use this location data in policies, and location data is saved in events.
+
+To configure GeoIP, sign up for a free MaxMind account [here](https://www.maxmind.com/en/geolite2/signup).
+
+After you have your account ID and license key, add the following block to your `.env` file:
+
+```bash
+GEOIPUPDATE_ACCOUNT_ID=*your account ID*
+GEOIPUPDATE_LICENSE_KEY=* your license key*
+AUTHENTIK_AUTHENTIK__GEOIP=/geoip/GeoLite2-City.mmdb
+```
+
+The GeoIP database will automatically be updated every 8 hours.
+
+### Running on Port 80/443
+
+By default, authentik listens on port 9000 for HTTP and 9443 for HTTPS. To change this, you can set the following variables in `.env`:
+
+```bash
+AUTHENTIK_PORT_HTTP=80
+AUTHENTIK_PORT_HTTPS=443
+```
+
+Afterwards, make sure to run `docker-compose up -d`.

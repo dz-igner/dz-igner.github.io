@@ -16,7 +16,7 @@ Eventuell wurden spezielle Einstellungen vorgenommen, spezielle Backup oder HA R
 
 ## Proxmox VE Host Backup mit Borg Backup
 
-Borg Backup ist eine kostenlose Software, welche für sehr viele Betriebssysteme verfügbar ist, unter anderem natürlich Linux. Mir persönlich gefallen die Effizienten Funktionen, wie z.B. Deduplication & Compression sehr gut. Es spart besonders für das “lästige” Backup enorm viel Speicherplatz. Beide Funktionen in Kombination erreichen gerne mal schnell Werte von bis zu 9:1, je nachdem was Ihr so an Daten in euer Backup schiebt.
+Borg Backup ist eine kostenlose Software, welche für sehr viele Betriebssysteme verfügbar ist, unter anderem natürlich Linux. Mir persönlich gefallen die effizienten Funktionen, wie z.B. Deduplication & Compression sehr gut. Es spart besonders für das “lästige” Backup enorm viel Speicherplatz. Beide Funktionen in Kombination erreichen gerne mal schnell Werte von bis zu 9:1, je nachdem was Ihr so an Daten in euer Backup schiebt.
 
 Kommen wir zum eigentlichen, was sollte ich von meinem Proxmox Host alles speichern?
 

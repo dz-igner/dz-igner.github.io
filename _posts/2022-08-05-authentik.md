@@ -13,3 +13,30 @@ summary:
 ## What is authentik?
 
 authentik is an open-source Identity Provider focused on flexibility and versatility. You can use authentik in an existing environment to add support for new protocols, implement sign-up/recovery/etc. in your application so you don't have to deal with it, and many other things.
+
+## docker-compose installation
+
+This installation method is for test-setups and small-scale productive setups.
+
+### Requirements
+
+* A Linux host with at least 2 CPU cores and 2 GB of RAM.
+* docker
+* docker-compose
+
+### Preparation
+
+Download the latest docker-compose.yml from here. Place it in a directory of your choice.
+
+If this is a fresh authentik install run the following commands to generate a password:
+
+```bash
+# You can also use openssl instead: `openssl rand -base64 36`
+sudo apt-get install -y pwgen
+# Because of a PostgreSQL limitation, only passwords up to 99 chars are supported
+# See https://www.postgresql.org/message-id/09512C4F-8CB9-4021-B455-EF4C4F0D55A0@amazon.com
+echo "PG_PASS=$(pwgen -s 40 1)" >> .env
+echo "AUTHENTIK_SECRET_KEY=$(pwgen -s 50 1)" >> .env
+# Skip if you don't want to enable error reporting
+echo "AUTHENTIK_ERROR_REPORTING__ENABLED=true" >> .env
+```

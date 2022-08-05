@@ -10,13 +10,13 @@ summary:
 
 ![Darth Vaper](https://borgbackup.readthedocs.io/en/stable/_static/logo.svg){: width="200" height="200" }{: .left }{: .shadow }
 
-Das Proxmox Host Backup ist genauso wichtig, wie die Backups wie von den eigentlichen virtuellen Maschinen. Wenn es zu dem Fall kommt, dass der Host selber ausfällt, dann sind nicht nur die Hüllen von den virtuellen Maschinen weg, sondern auch jegliche Einstellungen in eurer Proxmox Umgebung.
+Das Proxmox Host Backup ist genauso wichtig, wie die Backups der virtuellen Maschinen. Wenn der Host ausfällt, sind nicht nur die Hüllen der virtuellen Maschinen weg, sondern auch alle Einstellungen der Proxmox Umgebung.
 
-Eventuell habt Ihr spezielle Einstellungen vorgenommen, spezielle Backup oder HA Regeln. Alle diese Regeln sind nun weg. Also müssen wir uns bemühen, dass auch diese Einstellungen schnell und einfach gesichert werden.
+Eventuell wurden spezielle Einstellungen vorgenommen, spezielle Backup oder HA Regeln. Alle diese Regeln sind nun weg. Also müssen wir uns bemühen, dass auch diese Einstellungen schnell und einfach gesichert werden.
 
 ## Proxmox VE Host Backup mit Borg Backup
 
-Borg Backup ist eine kostenlose Software, welche für sehr viele Betriebssysteme verfügbar ist, unteranderem natürlich Linux. Mir persönlich gefallen die Effizienten Funktionen, wie z.B. Deduplication & Compression sehr gut. Es spart besonders für das “lästige” Backup enorm viel Speicherplatz. Beide Funktionen in Kombination erreichen gerne mal schnell Werte von bis zu 9:1, je nachdem was Ihr so an Daten in euer Backup schiebt.
+Borg Backup ist eine kostenlose Software, welche für sehr viele Betriebssysteme verfügbar ist, unter anderem natürlich Linux. Mir persönlich gefallen die Effizienten Funktionen, wie z.B. Deduplication & Compression sehr gut. Es spart besonders für das “lästige” Backup enorm viel Speicherplatz. Beide Funktionen in Kombination erreichen gerne mal schnell Werte von bis zu 9:1, je nachdem was Ihr so an Daten in euer Backup schiebt.
 
 Kommen wir zum eigentlichen, was sollte ich von meinem Proxmox Host alles speichern?
 

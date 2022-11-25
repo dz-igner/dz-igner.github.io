@@ -20,11 +20,11 @@ Borg Backup ist eine kostenlose Software, welche für sehr viele Betriebssysteme
 
 Kommen wir zum eigentlichen, was sollte ich von meinem Proxmox Host alles speichern?
 
-/etc/pve
-/etc/network
-/etc/hosts
-/etc/passwd
-Der Template Ordner wo eure Templates und ISOs liegen?
+* /etc/pve
+* /etc/network
+* /etc/hosts
+* /etc/passwd
+* Der Template Ordner wo eure Templates und ISOs liegen
 
 Grundsätzlich reicht es wenn Ihr den Ordner /etc/pve speichert, denn dort liegen alle Konfigurationen für den Proxmox VE. Wenn Ihr noch zusätzlich weitere Informationen speichern möchte wie ich hier, braucht ihr diese Ordner nur mit in euer Backup aufnehmen. Aber wie das jetzt wirklich geht kommt im folgenden Abschnitt.
 

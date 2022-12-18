@@ -10,7 +10,7 @@ summary:
 
 ## Introduction
 
-![Darth Vaper](https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png){: width="200" height="200" }{: .left }{: .shadow }
+![Darth Vaper][def]{: width="200" height="200" }{: .left }{: .shadow }
 
 ### What is Yacht?
 
@@ -43,3 +43,6 @@ https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/yacht/Templ
 ```
 
 In templates you are able to define variables (starting with `!`) to have them automatically replaced by whatever variable the user has set in their server settings (ie. `!config` will be replaced by `/yacht/AppData/Config` by default).
+
+
+[def]: https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png

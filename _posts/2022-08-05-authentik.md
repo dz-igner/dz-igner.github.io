@@ -88,4 +88,4 @@ AUTHENTIK_PORT_HTTP=80
 AUTHENTIK_PORT_HTTPS=443
 ```
 
-Afterwards, make sure to run `docker-compose up -d`.
+Afterwards, make sure to run `docker-compose up -d`

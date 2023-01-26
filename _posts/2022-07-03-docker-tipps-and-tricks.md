@@ -18,7 +18,7 @@ Für Windows, macOS und Linux gibt es eine weitere Variante, ausgerichtet auf En
 
 Docker Desktop laden Sie auf der Website von Docker herunter. Zur Installation gibt es nicht viel zu beschreiben, der Installer ist selbsterklärend. Unter Windows sollten Sie vorab das Windows Subsystem for Linux (WSL2) installieren und bei der Installation diese Option auswählen. Für Linux-Systeme stellt Docker fertige Pakete für Ubuntu, Debian, Fedora und Arch Linux bereit. Letzteres versieht Docker noch mit dem Status "experimentell". Für die Installation unter Linux brauchen Sie KVM-Virtualisierung, Qemu 5.2 oder neuer, systemd und eine KDE- oder Gnome-Desktopumgebung. Je nach Distribution müssen Sie eine Gnome-Erweiterung für das Docker-Menü nachrüsten.
 
-In den folgenden Hinweisen geht es um die Installation der Community-Edition für Linux-Server und Linux-Desktops. 
+In den folgenden Hinweisen geht es um die Installation der Community-Edition für Linux-Server und Linux-Desktops.
 
 ## Docker Engine unter Linux
 

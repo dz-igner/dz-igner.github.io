@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "All About The *NIX Shell"
+title: "All about the *NIX Shell"
 date: 2023-01-26 07:51
 category: 
 author: 

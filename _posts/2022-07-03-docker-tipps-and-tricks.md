@@ -82,8 +82,7 @@ Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer 
 
 ![Darth Vaper](https://gnulinux.ch/bl-content/uploads/pages/d8bf20558ad1af5edd73e5abe1ce9f83/logo.png){: width="400" height="400" }{: .left }{: .shadow }
 
-
-### Die Gründe für meine Docker-Abneigung:
+### Die Gründe für meine Docker-Abneigung
 
 - Die Konfiguration von Dockercontainern war und ist mir zu umständlich
 - Mit den Bordmitteln hat man zu wenig Überblick über den aktuellen Status des/der Systeme
@@ -117,7 +116,7 @@ docker run -d -p 8000:8000 -p 9000:9000 --name portainer \
    portainer/portainer-ce:latest
 ```
 
-Danach ist Docker incl. Portainer bereit. Wer möchte kann noch Docker Compose installieren. 
+Danach ist Docker incl. Portainer bereit. Wer möchte kann noch Docker Compose installieren.
 
 Neben einzelnen Containern bietet Portainer auch die Möglichkeit ganze Stacks von Containern zu definieren. Dabei wird für die Definition des Stacks das Docker-Compose-Format in Form einer yml Datei genutzt. Wurde ein Stack außerhalb von Portainer erstellt, wird dieser zwar angezeigt und man erhält einen guten Überblick über die zusammenhängenden Container aber die Verwaltung eines Stacks ist nur möglich, wenn dieser auch in Portainer erstellt wurde. Mit Docker Compose lassen sich also komplette Stacks mithilfe von yml Dateien installieren. Also z.B. ein kompletter LAMP Stack
 
@@ -153,7 +152,6 @@ services:
 
 Eine solche yml Datei kann man via Browser ins System hochladen.
 
-Der Aufruf von Portainer erfolgt im Webbrowser unter <IP-Adresse>:9000  wobei der Port natürlich anpassbar ist
+Der Aufruf von Portainer erfolgt im Webbrowser unter <http://localhost:9000>  wobei der Port natürlich anpassbar ist
 
 Nach der Anmeldung wird das Dashboard  angezeigt, das bereits einen guten Überblick über den Docker-Host liefert. Auf einen Blick sind Hardwareinformationen wie die Anzahl der Prozessoren und die Größe des Arbeitsspeichers, sowie Docker spezifische Informationen (Anzahl der Container, Images, Volumes und Networks) ersichtlich.
-

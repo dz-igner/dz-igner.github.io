@@ -77,3 +77,82 @@ docker compose version
 ## Docker unterwegs
 
 Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer unterwegs mit Docker experimentieren oder testen möchte, kann sich den Webdienst `Play With Docker` ansehen. Dort kann man sich mit den Docker-Anmeldedaten einloggen und im Browser mit Containern hantieren.
+
+## Portainer... oder wie man Docker schön macht
+
+![Darth Vaper](https://gnulinux.ch/bl-content/uploads/pages/d8bf20558ad1af5edd73e5abe1ce9f83/logo.png){: width="100" height="100" }{: .left }{: .shadow }
+
+Die Gründe für meine Docker-Abneigung:
+
+- Die Konfiguration von Dockercontainern war und ist mir zu umständlich
+- Mit den Bordmitteln hat man zu wenig Überblick über den aktuellen Status des/der Systeme
+- Änderungen am System sind umständlich und unkomfortabel.
+
+So war es bis ich von Portainer erfahren habe.
+
+Portainer ist vom Prinzip her eine grafische Oberfläche für alles, was mit Dockercontainern zu tun hat. Man kann seine benötigten Container bequem in der GUI installieren oder auch, wenn man will traditionell auf der Kommandozeile. Im letzteren Fall wird ein auf diese Weise manuell installierte r Container trotzdem später in Portainer sichtbar und administrierbar sein.
+
+Alle Parameter eines Dockercontainers lassen sich (auch im nachhinein) komfortabel konfigurieren.
+
+- Netzwerkadressen und Ports
+- Images (Installationsdateien)
+- Volumes (Persistenter Speicher auf dem Host)
+- Umgebungsvariablen
+- Startverhalten
+- Logs
+- Fähigkeiten
+- usw......
+
+Um in den Genuss von Portainer zu kommen, muss man eigentlich nur das Grundgerüst installieren. Das wäre Docker, Portainer selbst, und vielleicht noch Docker Compose.
+
+## Portainer installieren
+
+```bash
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+   portainer/portainer-ce:latest
+```
+
+Danach ist Docker incl. Portainer bereit. Wer möchte kann noch Docker Compose installieren. 
+
+Neben einzelnen Containern bietet Portainer auch die Möglichkeit ganze Stacks von Containern zu definieren. Dabei wird für die Definition des Stacks das Docker-Compose-Format in Form einer yml Datei genutzt. Wurde ein Stack außerhalb von Portainer erstellt, wird dieser zwar angezeigt und man erhält einen guten Überblick über die zusammenhängenden Container aber die Verwaltung eines Stacks ist nur möglich, wenn dieser auch in Portainer erstellt wurde. Mit Docker Compose lassen sich also komplette Stacks mithilfe von yml Dateien installieren. Also z.B. ein kompletter LAMP Stack
+
+### Beispiel einer yml-Datei
+
+```yaml
+version: "3"
+
+services:
+  web:
+    image: "apache:${PHP_VERSION}"
+    restart: 'always'
+    depends_on:
+      - mariadb
+    restart: 'always'
+    ports:
+      - '8080:80'
+    links:
+      - mariadb
+  mariadb:
+    image: "mariadb:${MARIADB_VERSION}"
+    restart: 'always'
+    volumes: 
+      - "/var/lib/mysql/data:${MARIADB_DATA_DIR}"
+      - "/var/lib/mysql/logs:${MARIADB_LOG_DIR}"
+      - /var/docker/mariadb/conf:/etc/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+      MYSQL_USER: "${MYSQL_USER}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
+```
+
+Eine solche yml Datei kann man via Browser ins System hochladen.
+
+Der Aufruf von Portainer erfolgt im Webbrowser unter <IP-Adresse>:9000  wobei der Port natürlich anpassbar ist
+
+Nach der Anmeldung wird das Dashboard  angezeigt, das bereits einen guten Überblick über den Docker-Host liefert. Auf einen Blick sind Hardwareinformationen wie die Anzahl der Prozessoren und die Größe des Arbeitsspeichers, sowie Docker spezifische Informationen (Anzahl der Container, Images, Volumes und Networks) ersichtlich.
+

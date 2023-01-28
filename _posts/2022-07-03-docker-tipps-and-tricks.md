@@ -80,7 +80,7 @@ Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer 
 
 ## Portainer... oder wie man Docker schön macht
 
-![Darth Vaper](https://gnulinux.ch/bl-content/uploads/pages/d8bf20558ad1af5edd73e5abe1ce9f83/logo.png){: width="100" height="100" }{: .left }{: .shadow }
+![Darth Vaper](https://gnulinux.ch/bl-content/uploads/pages/d8bf20558ad1af5edd73e5abe1ce9f83/logo.png){: width="200" height="200" }{: .left }{: .shadow }
 
 Die Gründe für meine Docker-Abneigung:
 

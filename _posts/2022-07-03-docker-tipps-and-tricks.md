@@ -119,6 +119,12 @@ docker run -d -p 8000:8000 -p 9000:9000 --name portainer \
    portainer/portainer-ce:latest
 ```
 
+## Portainer-Agent für die Verwaltung eines Docker-Hosts mit Portainer auf externem Host
+
+```bash
+docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:latest
+```
+
 Danach ist Docker incl. Portainer bereit. Wer möchte kann noch Docker Compose installieren.
 
 Neben einzelnen Containern bietet Portainer auch die Möglichkeit ganze Stacks von Containern zu definieren. Dabei wird für die Definition des Stacks das Docker-Compose-Format in Form einer yml Datei genutzt. Wurde ein Stack außerhalb von Portainer erstellt, wird dieser zwar angezeigt und man erhält einen guten Überblick über die zusammenhängenden Container aber die Verwaltung eines Stacks ist nur möglich, wenn dieser auch in Portainer erstellt wurde. Mit Docker Compose lassen sich also komplette Stacks mithilfe von yml Dateien installieren. Also z.B. ein kompletter LAMP Stack

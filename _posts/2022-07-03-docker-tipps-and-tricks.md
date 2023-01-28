@@ -82,7 +82,8 @@ Docker gibt es noch nicht für mobile Betriebssysteme wie iOS oder Android. Wer 
 
 ![Darth Vaper](https://gnulinux.ch/bl-content/uploads/pages/d8bf20558ad1af5edd73e5abe1ce9f83/logo.png){: width="200" height="200" }{: .left }{: .shadow }
 
-Die Gründe für meine Docker-Abneigung:
+
+### Die Gründe für meine Docker-Abneigung:
 
 - Die Konfiguration von Dockercontainern war und ist mir zu umständlich
 - Mit den Bordmitteln hat man zu wenig Überblick über den aktuellen Status des/der Systeme

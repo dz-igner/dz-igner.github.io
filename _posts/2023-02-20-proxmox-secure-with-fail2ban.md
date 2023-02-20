@@ -23,7 +23,7 @@ Dafür fügen wir in der Datei “/etc/fail2ban/filter.d/proxmox.conf” ein paa
 
 Wer es genau wissen möchte. In dieser Konfiguration wird rückwirkend 6 Stunden in die Vergangenheit geschaut und bei 3 Fehlversuchen für wird 6 Stunden gesperrt. Diese Werte könnt Ihr natürlich auf eure Anforderung anpassen.
 
-```code
+```bash
 [proxmox]
 enabled = true
 port = https,http,8006
@@ -40,7 +40,7 @@ Jetzt müssen wir Fail2Ban noch beibringen wie man fehlerhafte Logins erkennt. S
 
 Wir legen eine neue Datei an mit folgenden Pfad. /etc/fail2ban/jail.local
 
-```code
+```bash
 [Definition]
 failregex = pvedaemon\[.*authentication failure; rhost=<HOST> user=.* msg=.*
 ignoreregex =

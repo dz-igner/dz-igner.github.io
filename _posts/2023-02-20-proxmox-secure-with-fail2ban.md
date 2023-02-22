@@ -19,7 +19,7 @@ apt install fail2ban
 ```
 
 Als nächstes aktivieren / erstellen wir die Funktion damit fail2ban “Proxmox” als Aufgabe akzeptiert.
-Dafür fügen wir in der Datei “/etc/fail2ban/filter.d/proxmox.conf” ein paar Zeilen hinzu.
+Dafür fügen wir in der Datei `/etc/fail2ban/filter.d/proxmox.conf` ein paar Zeilen hinzu.
 
 Wer es genau wissen möchte. In dieser Konfiguration wird rückwirkend 6 Stunden in die Vergangenheit geschaut und bei 3 Fehlversuchen für wird 6 Stunden gesperrt. Diese Werte könnt Ihr natürlich auf eure Anforderung anpassen.
 

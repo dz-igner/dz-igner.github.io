@@ -38,7 +38,7 @@ findtime = 21600
 
 Jetzt müssen wir Fail2Ban noch beibringen wie man fehlerhafte Logins erkennt. Sowas macht sich in der Regel bemerkbar mit Einträgen in eine Logdatei. Wir lesen also die Datei aus und werten die dort enthaltenen Informationen aus.
 
-Wir legen eine neue Datei an mit folgenden Pfad. /etc/fail2ban/jail.local
+Wir legen eine neue Datei an mit folgenden Pfad. `/etc/fail2ban/jail.local`
 
 ```bash
 [Definition]

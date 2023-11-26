@@ -40,9 +40,10 @@ apt install wget git
 
 ### Installation des Frameworks oh-my-zsh
 
-```bash
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
+**```bash
+sh -c "$(wget <https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh> -O -)"
+
+```**
 
 ### Installation des Plugins zsh-autosuggestions
 

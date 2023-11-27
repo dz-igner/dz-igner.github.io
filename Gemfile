@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify the gem's dependencies in jekyll-admin.gemspec
 # gemspec
 
-gem "jekyll-theme-chirpy", "~> 6.3", ">= 6.3.1"
+gem "jekyll-theme-chirpy", "~> 6.3.1", ">= 6.3.1"
 # gem "jekyll-theme-chirpy"
 
 group :test do

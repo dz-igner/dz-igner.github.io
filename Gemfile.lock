@@ -162,7 +162,7 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-theme-chirpy (~> 6.3.1, >= 6.3.1)
+  jekyll-theme-chirpy (~> 6.3, >= 6.3.1)
   nokogiri (~> 1.11)
   tzinfo (~> 1.2)
   tzinfo-data

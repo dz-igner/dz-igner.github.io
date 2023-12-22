@@ -47,3 +47,5 @@ gem "jekyll-sitemap"
 
 # A dependency of a custom-plugin inside `_plugins` directory.
 gem "nokogiri", "~> 1.11"
+
+gem 'sass-embedded', '~> 1.69', '>= 1.69.5'

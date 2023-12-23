@@ -86,7 +86,7 @@ img_cdn:
 # the avatar on sidebar, support local or CORS resources
 # avatar: https://nextcloud.cloudsic.de/s/xp3x6FQbssyEXCD/download/dv.jpg
 # avatar: https://nextcloud.cloudsic.de/s/sxe9tJzkB5RsxRE/download/Darth_Vaper_Productions_Logo_03.png
-avatar: https://https://picoshare.newsxc.net/-fiBDAGHocd
+avatar: https://picoshare.newsxc.net/-fiBDAGHocd
 # boolean type, the global switch for ToC in posts.
 toc: true
 

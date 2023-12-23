@@ -10,6 +10,8 @@ summary:
 
 ## Proxmox VE mit Fail2ban absichern gegen Loginversuche
 
+![Darth Vaper](https://www.clipartmax.com/png/small/19-194253_security-ok-firewall-transparent-icon.png){: width="200" height="200" }{: .left }
+
 Wer einen Proxmox VE Host im Internet betreibt und die Login-Oberfläche so für alle offen hat, sollte sich vor fehlerhaften “Login Versuchen” schützen. Doch Fail2ban muss erstmal lernen wie ein fehlerhafter Loginversuch bei Proxmox aussieht. Dafür erstellen wir bei der Einrichtung eine kleine Konfigurationsdatei die dabei fail2ban unterstützt.
 
 Wer noch kein fail2ban auf dem Proxmox Host installiert hat, der sollte dies nun tun mit folgendem Befehl.

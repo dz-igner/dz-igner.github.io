@@ -156,3 +156,7 @@ See more post formatting rules on the [Jekyll site](https://jekyllrb.com/docs/po
 If you need some help with markdown, check out the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 For more neat syntax for the Chirpy theme check their demo page on making posts <https://chirpy.cotes.page/posts/write-a-new-post/>
+
+Add Something again
+
+Lorem Ipsum

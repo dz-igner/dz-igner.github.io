@@ -157,8 +157,6 @@ If you need some help with markdown, check out the [markdown cheat sheet](https:
 
 For more neat syntax for the Chirpy theme check their demo page on making posts <https://chirpy.cotes.page/posts/write-a-new-post/>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est auctor etiam tempor praesent posuere montes scelerisque. Orci sociosqu himenaeos ac integer hendrerit nulla nisi. Cubilia gravida nullam commodo convallis placerat et sem. Potenti sociis elementum quis proin enim dictum magna. Ornare sollicitudin pretium sem at eget urna cras.
+Test Document
 
-Gravida molestie sed diam pulvinar nunc amet fringilla. Litora pharetra parturient viverra mi fringilla tempor consectetur. Aenean id auctor litora porttitor praesent integer tellus. Metus morbi venenatis elementum ullamcorper egestas felis tellus. Cras pulvinar magna imperdiet volutpat curabitur quis litora. Convallis in luctus curae ipsum fermentum adipiscing phasellus.
-
-Ornare lobortis porta porta ornare porta auctor primis. Scelerisque tempor accumsan mollis vestibulum curae sem pulvinar. Consequat curae dapibus sed quis id conubia orci. Adipiscing nec consectetur id urna interdum vulputate sit. Proin posuere nullam ultrices etiam porttitor lorem condimentum. Enim etiam purus semper accumsan quam vehicula dui.
+with Lorem Ipsum

@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Secure Self Hosted with Authentik | Traefik & NGINX Proxy Manager"
+date: 2022-08-05 10:08 +0200
+category: self-hosted
+author: 
+tags: [docker]
+summary: 
+---
+
+![Darth Vaper](https://camo.githubusercontent.com/4745974518b69f22b6297c1fc33a7faac798f04bed3b1d582e9f7a82b70727ce/68747470733a2f2f676f61757468656e74696b2e696f2f696d672f69636f6e5f746f705f6272616e645f636f6c6f75722e737667){: width="200" height="200" }{: .left }{: .shadow }
+
+## What is authentik?
+
+authentik is an open-source Identity Provider focused on flexibility and versatility. You can use authentik in an existing environment to add support for new protocols, implement sign-up/recovery/etc. in your application so you don't have to deal with it, and many other things.
+
+## docker-compose installation
+
+This installation method is for test-setups and small-scale productive setups.
+
+### Requirements
+
+* A Linux host with at least 2 CPU cores and 2 GB of RAM.
+* docker
+* docker-compose
+
+### Preparation
+
+Download the latest `docker-compose.yml` from [here](https://goauthentik.io/docker-compose.yml). Place it in a directory of your choice.
+
+If this is a fresh authentik install run the following commands to generate a password:
+
+```bash
+# You can also use openssl instead: `openssl rand -base64 36`
+sudo apt-get install -y pwgen
+# Because of a PostgreSQL limitation, only passwords up to 99 chars are supported
+# See https://www.postgresql.org/message-id/09512C4F-8CB9-4021-B455-EF4C4F0D55A0@amazon.com
+echo "PG_PASS=$(pwgen -s 40 1)" >> .env
+echo "AUTHENTIK_SECRET_KEY=$(pwgen -s 50 1)" >> .env
+# Skip if you don't want to enable error reporting
+echo "AUTHENTIK_ERROR_REPORTING__ENABLED=true" >> .env
+```
+
+### Email configuration (optional, but recommended)
+
+It is also recommended to configure global email credentials. These are used by authentik to notify you about alerts and configuration issues. They can also be used by [Email stages](https://goauthentik.io/docs/flow/stages/email/) to send verification/recovery emails.
+
+Append this block to your `.env` file
+
+```bash
+# SMTP Host Emails are sent to
+AUTHENTIK_EMAIL__HOST=localhost
+AUTHENTIK_EMAIL__PORT=25
+# Optionally authenticate (don't add quotation marks to you password)
+AUTHENTIK_EMAIL__USERNAME=
+AUTHENTIK_EMAIL__PASSWORD=
+# Use StartTLS
+AUTHENTIK_EMAIL__USE_TLS=false
+# Use SSL
+AUTHENTIK_EMAIL__USE_SSL=false
+AUTHENTIK_EMAIL__TIMEOUT=10
+# Email address authentik will send from, should have a correct @domain
+AUTHENTIK_EMAIL__FROM=authentik@localhost
+```
+
+### GeoIP configuration (optional)
+
+authentik can use a MaxMind-formatted GeoIP Database to extract location data from IPs. You can then use this location data in policies, and location data is saved in events.
+
+To configure GeoIP, sign up for a free MaxMind account [here](https://www.maxmind.com/en/geolite2/signup).
+
+After you have your account ID and license key, add the following block to your `.env` file:
+
+```bash
+GEOIPUPDATE_ACCOUNT_ID=*your account ID*
+GEOIPUPDATE_LICENSE_KEY=* your license key*
+AUTHENTIK_AUTHENTIK__GEOIP=/geoip/GeoLite2-City.mmdb
+```
+
+The GeoIP database will automatically be updated every 8 hours.
+
+### Running on Port 80/443
+
+By default, authentik listens on port 9000 for HTTP and 9443 for HTTPS. To change this, you can set the following variables in `.env`:
+
+```bash
+AUTHENTIK_PORT_HTTP=80
+AUTHENTIK_PORT_HTTPS=443
+```
+
+Afterwards, make sure to run `docker-compose up -d`
+
+Lorem Ipsum ...
